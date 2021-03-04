@@ -23,7 +23,7 @@ public class DigitUtil {
 
         List<String[]> letterArrList = new ArrayList<>();
         for (int num : arr) {
-            if (num != 0 && num != 1) {
+            if (num > 1 && num <= 9) {
                 letterArrList.add(letterMap.get(num));
             }
         }
@@ -31,7 +31,6 @@ public class DigitUtil {
         // 获取结果总长度
         int resultLength = letterArrList.size() > 0 ? 1 : 0;
         List<Integer> lenList = new ArrayList<>();
-        int arrLength = arr.length;
         for (int i = 0; i < letterArrList.size(); i++) {
             String[] letterArr = letterArrList.get(i);
             resultLength = resultLength * letterArr.length;
@@ -105,7 +104,6 @@ public class DigitUtil {
         // 获取结果总长度
         int resultLength = letterArrList.size() > 0 ? 1 : 0;
         List<Integer> lenList = new ArrayList<>();
-        int arrLength = arr.length;
         for (int i = 0; i < letterArrList.size(); i++) {
             String[] letterArr = letterArrList.get(i);
             resultLength = resultLength * letterArr.length;
